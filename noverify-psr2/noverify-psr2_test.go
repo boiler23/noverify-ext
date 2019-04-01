@@ -35,7 +35,7 @@ func singleFileReports(t *testing.T, contents string) []*linter.Report {
 
 	testParse(t, `test.php`, contents)
 	meta.SetIndexingComplete(true)
-	_, w := testParse(t, `first.php`, contents)
+	_, w := testParse(t, `test.php`, contents)
 
 	return w.GetReports()
 }
